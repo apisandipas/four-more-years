@@ -1,0 +1,35 @@
+@import 'compass/css3';
+@import 'bootstrap/bootstrap-compass';
+@import 'variables';
+@import 'bootstrap';
+@import 'type';
+@import 'utils';
+@import 'mixins';
+@import 'sprites';
+
+// Patterns
+
+
+// Partials
+@import 'partials/layout';
+@import 'partials/site-header';
+@import 'partials/site-footer';
+
+
+body {
+    background: #fff;
+    // @extend .arial;
+    font-size: 13px;
+    line-height: 1.6em;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+

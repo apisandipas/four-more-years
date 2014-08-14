@@ -1,0 +1,18 @@
+/**
+ * This is the Global site footer.
+ * located at the bottom of each and every page
+ */
+
+.site-footer{
+
+    
+    //  Desktop and Up
+    @include respond-to($desktop) {
+       
+      
+    }
+}
+
+
+
+

@@ -1,0 +1,18 @@
+{
+  "name": "static-templates",
+  "version": "0.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "matchdep": "^0.3.0",
+    "grunt-contrib-compass": "^0.9.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-rsync": "^0.6.2"
+  }
+}

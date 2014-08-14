@@ -1,0 +1,100 @@
+/**
+ * This is the Global site header.
+ * located at the top of each and every page
+ */
+body {
+    font-family: $kepler;
+}
+
+.site-header {
+   .logo {
+        @include use-sprite('logo-small');  
+        display: inline-block;
+        margin-top: 10px;
+        width: 165px;
+    }
+    .small-nav {
+        @extend %nav-list;
+        width: calc(99% - 165px);
+        display: inline-block;
+        ul {
+            display: inline-block;
+            float: right;
+        }
+    }
+    @include respond-to($desktop) {
+        .small-nav { display: none; }
+        .logo {
+            @include use-sprite('logo');
+            margin: 20px auto;
+        }
+    }
+}
+
+.sticky-header {
+    @extend .navbar;
+    @extend .navbar-default;
+    display: none;
+    background: #fff;
+    width: 100%;
+    a {
+        font-weight: bold !important;
+    }
+    .logo {
+        @include use-sprite('logo-small');  
+        margin-top: 15px;
+    }
+    .small-nav {
+        @extend %nav-list;
+
+    }
+    &.sticky {
+        display: block;
+        position: fixed; 
+        top:0;
+    }
+}
+
+%nav-list {
+    ul { 
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        display: inline;
+        float: left;
+    }   
+    a { 
+        display: block;
+        padding: 1em;
+        font-family: $kepler !important;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+
+
+
+
+.site-nav {
+    display: none;
+    @extend %nav-list;
+
+    @include respond-to($desktop) {
+        display: inline-block;
+        // display: none;
+        position: relative;
+        margin: 0 auto;
+        left: 50%;
+        width: 470px;
+        margin-left: -235px;
+        padding: 0 15px 0;
+        text-align: center;
+        
+        
+    }
+       
+}
+
