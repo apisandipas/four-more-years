@@ -19,7 +19,14 @@
                     <span class="twitter-sm"></span> Tweet
                 </a>
             </div>
-        </div>
+            
+            <div class="prev-next-links">
+                <?php previous_post_link('%link', '<div class="previous-post"></div>'); ?> 
+                <?php next_post_link('%link', '<div class="next-post"></div>'); ?> 
+            </div>
+             
+
+        </div><!-- page-overlap-->
    </div><!-- .row -->
 </div><!-- .container -->
 

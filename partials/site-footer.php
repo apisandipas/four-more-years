@@ -5,8 +5,9 @@
         
             <div class="social col-md-3 col-md-offset-3">
                 <ul>
-                    <li><a href="https://www.facebook.com/pages/Aquanaut-Brewing-Company/255412274644880" target="_blank" class="facebook"></a></li>
-                    <li><a href="https://twitter.com/AquanautBrewing" target="_blank" class="instagram"></a></li>
+                    <li><a href="<?php echo esc_attr( get_field('facebook_url', 'option') ); ?>" target="_blank" class="facebook"></a></li>
+                    <li><a href="<?php echo esc_attr( get_field('instagram_url', 'option') ); ?>" target="_blank" class="instagram"></a></li>
+                    <li><a href="<?php echo esc_attr( get_field('twitter_url', 'option') ); ?>" target="_blank" class="twitter"></a></li>
                 </ul>
             </div>
 

@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                 tasks: ["compass:build"]
             },
             compassSprites: {
-                files: ["assets/img/icon/**/*.png"],
+                files: ["assets/img/icons/**/*.png"],
                 tasks: ["compass:build"]
             }
         },

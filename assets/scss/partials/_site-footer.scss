@@ -21,6 +21,9 @@
     .instagram{
         @include use-sprite('instagram');
     }
+    .twitter{
+        @include use-sprite('twitter');
+    }
     .copy {
         font-weight: bold;
         text-align: right;

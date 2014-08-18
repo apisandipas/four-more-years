@@ -89,3 +89,10 @@ function sa_twitter_share(){
 
     return $twt_path;
 }
+
+function sa_address_to_map_url(){
+    $line1 = esc_html( get_field( 'address_line_1', 'option' ) );
+    $line2 = esc_html( get_field( 'address_line_2', 'option' ) );
+
+    return 'http://maps.google.com/?q=' . $line1 . ' ' . $line2;
+}

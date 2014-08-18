@@ -13,6 +13,11 @@
     </div>    
            
 
+<div class="demo">
+    <div class="demo__header"></div>   
+    <div class="demo__footer"></div>   
+</div>
+
 </section>
 <?php get_footer(); ?>
 

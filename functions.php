@@ -59,3 +59,13 @@ function navigation_menus() {
     );
     register_nav_menus( $locations );
 }
+
+
+/**
+*  Create a simple sub options page called 'Footer'
+*/
+if( function_exists('acf_add_options_sub_page') )
+{
+    acf_add_options_sub_page( 'General' );
+    // acf_add_options_sub_page( 'Social Media' );
+}

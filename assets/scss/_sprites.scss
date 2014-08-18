@@ -1,5 +1,7 @@
-$icon-spacing: 10px;
-$icon-sprite-dimensions: true;
+$icons-spacing: 20px;
+$icons-2x-spacing: 20px;
+$icons-sprite-dimensions: true;
+$icons-2x-sprite-dimensions: true;
 @import "icons/*.png";              
 @include all-icons-sprites;
 @import "icons-2x/*.png";              

@@ -1,0 +1,42 @@
+.page-overlap {
+    position: static;
+    .prev-next-links{
+        padding: 1em;
+        position: relative;
+        a { 
+            display: inline-block;
+        }
+        .previous-post {
+            @include use-sprite('arrow-left');
+        }
+        .next-post{
+            @include use-sprite('arrow-right');
+        }
+        a[rel="next"] { 
+            float: right;
+        }
+    }
+}
+    
+
+
+// Handles the positioning for Desktop views where arrows are positioned half 
+// way down the page, -50px on the outside of the container
+@include respond-to($desktop) {
+    .page-overlap {
+        position: relative;
+        .prev-next-links{
+            position: static;
+            .previous-post {
+                position: absolute;
+                top: 50%;
+                left: -50px;
+            }
+            .next-post{
+                position: absolute;
+                top: 50%;
+                right: -50px;
+            }
+        }
+    }
+}

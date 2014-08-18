@@ -7,6 +7,7 @@ body {
 }
 
 .site-header {
+    display: none;
    .logo {
         @include use-sprite('logo-small');  
         display: inline-block;
@@ -23,6 +24,7 @@ body {
         }
     }
     @include respond-to($desktop) {
+        display: block;
         .small-nav { display: none; }
         .logo {
             @include use-sprite('logo');
