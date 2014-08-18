@@ -34,7 +34,10 @@ body {
 .sticky-header {
     @extend .navbar;
     @extend .navbar-default;
-    display: none;
+    z-index: 999;
+    display: block;
+    position: fixed; 
+    top:0;
     background: #fff;
     width: 100%;
     a {
@@ -43,16 +46,21 @@ body {
     .logo {
         @include use-sprite('logo-small');  
         margin-top: 15px;
+        margin-left: 15px;
     }
     .small-nav {
         @extend %nav-list;
 
     }
-    &.sticky {
-        display: block;
-        position: fixed; 
-        top:0;
+    @include respond-to($desktop) {
+        display: none;
+        &.sticky {
+            display: block;
+            position: fixed; 
+            top:0;
+        }
     }
+
 }
 
 %nav-list {
@@ -67,33 +75,30 @@ body {
     }   
     a { 
         display: block;
-        padding: 1em;
+        padding: 1em 2em 1em;
         font-family: $kepler !important;
         font-size: 16px;
         font-weight: 700;
     }
 }
 
-
-
-
+// Removed nav hover background color
+.nav > li > a:hover, .nav > li > a:focus {
+    background: 0;
+}
 
 .site-nav {
-    display: none;
     @extend %nav-list;
-
+    display: none;
     @include respond-to($desktop) {
         display: inline-block;
-        // display: none;
         position: relative;
-        margin: 0 auto;
+        margin: -10px auto -10px -259px;
+        // margin-left: -259px;
+        // margin-bottom: -10px;
         left: 50%;
-        width: 470px;
-        margin-left: -235px;
         padding: 0 15px 0;
         text-align: center;
-        
-        
     }
        
 }

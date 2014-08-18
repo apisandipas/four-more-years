@@ -50,3 +50,42 @@ function sa_copyright_range($start_copyright_year = "2014") {
         return $start_copyright_year . ' - ' . $current_year;
     }
 }
+
+
+/**
+ * Formats the date for the blog posts.
+ * @return [type] [description]
+ */
+function sa_post_date(){
+    global $post;
+    echo get_the_date('m', $post->ID);?><br><?php
+    echo get_the_date('y', $post->ID);
+}
+
+
+/**
+ * Grabs the permalink and appends it to the Facebook Sharer service url
+ * @return {String} Facebook Share URL
+ */
+function sa_facebook_share(){
+    global $post;
+
+    $permalink = urlencode( get_permalink( $post->ID ) );
+    $fb_url = "http://www.facebook.com/sharer/sharer.php?u=" . $permalink;
+
+    return $fb_url;
+}
+
+
+/**
+ * Appends share text to the Twitter Sharing service url
+ * @return {String} Twitter Share URL
+ */
+function sa_twitter_share(){
+    global $post;
+
+    $post_title = urlencode( get_the_title( $post ) );
+    $twt_path = "http://twitter.com/share/?text=Aquanaut Brewing Company presents: " . $post_title . ' ' ;
+
+    return $twt_path;
+}

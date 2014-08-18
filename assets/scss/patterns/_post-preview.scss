@@ -1,0 +1,41 @@
+.post-preview {
+    display: block;
+    > a {
+        @include single-transition(color, 300ms, linear);
+        display: table; 
+        width: 100%;
+        padding: 75px 0 75px;
+        border-bottom: 1px solid;
+        overflow: hidden;
+        &:hover {
+            color: #333;
+        }
+    }
+    %post-data{
+       display: table-cell;
+       text-align: left;
+       vertical-align: middle;
+    }
+    .post-date {
+        @extend %post-data;
+        font-size: 38px;
+        font-weight: bold;
+        line-height: 1em;
+        padding-right: 1em !important;
+        width: 60px;
+    }
+    .post-title{
+        @extend %post-data;
+        font-size: 40px;
+        line-height: 1em;
+    }
+}
+
+.post-previews {
+    &.hovered a {
+        color: #dedede !important;
+    }
+    .post-preview a:hover {
+        color: #333 !important;
+    }
+}

@@ -7,29 +7,79 @@
 @import 'mixins';
 @import 'sprites';
 
-// Patterns
-
-
 // Partials
 @import 'partials/layout';
 @import 'partials/site-header';
 @import 'partials/site-footer';
 
+// Patterns
+@import 'patterns/home-splash';
+@import 'patterns/post-preview';
+@import 'patterns/social-share';
+
+
 
 body {
     background: #fff;
-    // @extend .arial;
-    font-size: 13px;
+    font-size: $font-size-base !important;
     line-height: 1.6em;
     color: #333;
+    text-rendering: optimizeLegibility;
+}
+
+.nav > li > a {
+    $pad: 1.25em;
+    padding-left: $pad !important;
+    padding-right: $pad !important;
 }
 
 
+a {
+    color: $brand-primary !important;
+    text-decoration: none;
+    &:hover, &:active { text-decoration: none; }
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+.kepler-italic{
+    font-family: $kepler;
+    font-style: italic;
+    font-weight: bold;
+}
 
 
+.page-overlap {
+    @extend .col-md-8;
+    @extend .col-md-offset-2;
+    position: relative; top: -100px;
+    background: #fff;
+    min-height: 100px;
+    padding: 2em;
+    font-size: 18px;
+    @include respond-to($desktop) {
+         padding: 2em 3.5em;
+    }
+   
+
+}
+
+p:first-of-type:first-letter {
+    float: left !important;
+    font-size: 45px !important;
+    line-height: 45px !important;
+    padding-right: 8px !important;
+    font-weight: bold;
+    padding-top: 5px;
+}
 
 
-
-
-
-
+.post-title {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}

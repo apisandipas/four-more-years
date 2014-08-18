@@ -1,33 +1,8 @@
-<!-- <div class="row"> -->
-    <header class="site-header">
-        <a href="<?php echo home_url(); ?>" title="" class="logo" rel="home"></a>
-    </header><!-- header -->
-<!-- </div> -->
 
-    <?php /*
-    <header class="sticky-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <a href="<?php echo home_url(); ?>" title="" class="logo" rel="home"></a>
-                    
-                    <nav class="small-nav">
-                         <?php  
-                            // Primary Navivation
-                            wp_nav_menu( array( 
-                                'menu'            => 'Primary',
-                                'container'       => false ,
-                                'container_class' => 'collapse navbar-collapse',
-                                'menu_class'      => 'nav navbar-nav navbar-right',
-                                'walker'          => new wp_bootstrap_navwalker()
-                            ) ); 
-                        ?>
-                    </nav>
-                </div>
-            </div><!-- row -->
-        </div><!-- container-->
-    </header><!-- header -->
-    */?>
+<header class="site-header">
+    <a href="<?php echo home_url(); ?>" title="" class="logo" rel="home"></a>
+</header><!-- header -->
+
    
 <nav class="sticky-header" role="navigation">
   <div class="container">
@@ -62,24 +37,15 @@
   </div><!-- /.container-->
 </nav>
 
-<!-- <div class="row"> -->
-    <nav class="site-nav tk-kepler-std clearfix">
-        <h3 class="assistive-text">Main menu</h3><!-- assistive-text -->
 
-        <div class="skip-link">
-            <a class="assistive-text" href="#content" title="Skip to primary content">Skip to primary content</a>
-        </div><!-- skip-link -->
-        <?php  
-            // Primary Navivation
-            wp_nav_menu( array( 
-                'menu'            => 'Primary',
-                'container'       => false ,
-                'container_class' => 'collapse navbar-collapse',
-                'menu_class'      => 'nav navbar-nav',
-                'walker'          => new wp_bootstrap_navwalker()
-            ) ); 
-        ?>
-    </nav><!-- site-nav -->
-<!-- </div> -->
-
-
+<nav class="site-nav tk-kepler-std clearfix">
+    <?php  
+        // Primary Navivation
+        wp_nav_menu( array( 
+            'menu'            => 'Primary',
+            'container'       => false ,
+            'container_class' => 'collapse navbar-collapse',
+            'menu_class'      => 'nav navbar-nav',
+            'walker'          => new wp_bootstrap_navwalker()
+        ) ); 
+    ?></nav>
