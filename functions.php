@@ -17,7 +17,9 @@ require_once dirname(__FILE__). '/includes/bootstrap.php';
     // http://codex.wordpress.org/Function_Reference/add_image_size
     // ———————————————————————————————-
     add_theme_support( 'post-thumbnails' );
-    // set_post_thumbnail_size( 312, 415 ); // Default thumbnail size
+    set_post_thumbnail_size( 308, 308 , true); // Used in the Beer and Product grids. poorly named :>
+    add_image_size('product-detail', 450, 450, true); // Used in the Product detail pages.
+
 
  }
 

@@ -8,10 +8,9 @@
             <?php  while ( have_posts() ) : the_post(); ?>
                 <h2 class="post-title"><?php the_title(); ?></h2>  
                 <?php the_content(); ?>
-                <?php  //get_template_part( 'content', 'page' ); ?>
             <?php  endwhile; // end of the loop. ?>
 
-            <div class="social-share ">
+            <div class="social-share">
                 <a href="<?php echo sa_facebook_share(); ?>" role="button" class="facebook-share btn btn-default" data-window-title="Share on Facebook">
                     <span class="facebook-sm"></span> Share
                 </a>

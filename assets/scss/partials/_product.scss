@@ -1,0 +1,70 @@
+.post-type-archive-product {
+    .product {
+        img {
+            height: auto; 
+            width: 100%; 
+            display: block;
+        }
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px 0; 
+        margin-bottom: 20px;
+        @include respond-to($medium) {
+            width: 49%;
+        }
+        @include respond-to($desktop){
+            width: 33%;
+            margin-bottom: 40px;
+        }
+    }
+
+    .product-meta {
+        .product-name {
+            margin-top: 1em;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .product-grid {
+        padding: 40px 0 40px;
+    }
+}
+
+
+.single-product {
+    .attachment-product-detail{
+        width: 100%;
+        height: auto;
+    }
+    .product {
+        padding: 45px 0 45px;
+    }
+    .product-title{
+        font-size: 30px;
+        margin-bottom: 0.5em;
+    }
+    .product-price {
+        font-size: 25px;
+        margin-bottom: 0.5em;
+    }
+    .product-desc {
+        font-size: 18px;
+    }
+
+    .product-button {
+        @extend %aquanaut-button;
+    }
+    @include respond-to($desktop) {
+        .product {
+            padding: 90px 0 90px;
+        }
+    }
+}

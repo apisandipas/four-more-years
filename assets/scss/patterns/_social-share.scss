@@ -3,18 +3,26 @@
     @extend .btn-group-justified;
     
     .facebook-share, .twitter-share {
-        @btn btn-default
+        @extend .btn;
+        @extend .btn-default;
+        border: 1px solid black;
+        border-radius: 0;
     }
 
     .facebook-sm { 
         @include use-sprite('facebook-sm'); 
         display: inline-block;
         margin-right: 0.5em;
+        position: relative;
+        top: 3px;
+        
     }
     .twitter-sm { 
         @include use-sprite('twitter-sm'); 
         display: inline-block; 
         margin-right: 0.5em; 
+        position: relative;
+        top: 3px;
     }
 
     &.hovered a {

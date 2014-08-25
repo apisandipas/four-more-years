@@ -1,3 +1,5 @@
 <?php get_header(); ?>
-Archive
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <!-- post -->
+    <?php endwhile; endif; ?> 
 <?php get_footer(); ?>

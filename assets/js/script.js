@@ -33,6 +33,9 @@
 
     });
 
+    $(".toggleNav").click(function () {
+        $(".toggleNavButton").toggleClass("active");
+     });
 
 
 

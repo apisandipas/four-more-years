@@ -1,0 +1,113 @@
+.post-type-archive-beer {
+    .beer {
+        img {
+            height: auto; 
+            width: 100%; 
+            display: block;
+        }
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px 0; 
+        margin-bottom: 20px;
+        @include respond-to($medium) {
+            width: 49%;
+        }
+        @include respond-to($desktop){
+            width: 33%;
+            margin-bottom: 40px;
+        }
+    }
+
+    .beer-meta {
+        .beer-name {
+            margin-top: 1em;
+            font-size: 20px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .beer-type {
+            font-size: 14px;
+        }
+    }
+    .beer-grid {
+        padding: 40px 0 40px;
+    }
+}
+
+
+html, body { height: 100%;}
+.single-beer {
+    font-weight: 300;
+    font-size: 18px !important;
+    
+    .beer-detail-bg {
+        color: #fff;
+        background-repeat: none;
+        background-position: top center;
+        
+        // @include respond-to($desktop) {
+            height: 862px;
+            background-size: cover;
+        // }
+            
+    }
+
+    .beer-meta-wrap {
+        position: relative;
+        overflow: hidden;
+        height: 862px;
+    }
+
+    .beer-meta {
+        text-shadow: 0px 0px 10px #000;
+        padding-top: 230px;
+        display: inline-block;
+        vertical-align: middle;
+        // position: absolute;
+        // bottom: 0;
+        table {
+            text-shadow: none;
+            margin-top: 1.5em;
+            text-align:center; 
+        }
+        td {
+            padding: 1em 1.5em 1em;
+            font-weight: bold;
+        }
+        .abv {
+            display: inline-block;
+            margin-right: 1em;
+            text-shadow: 0px 0px 10px #000;
+        }
+        .find {
+            padding: 1em;
+            
+            background: #fff; 
+            color: #333;
+            .marker {
+                @include use-sprite('map-marker');
+                display: inline-block;
+                margin-right: 0.5em;
+                position: relative;
+                top: 3px;
+            }
+            a { display: block; }
+        }
+        @include respond-to($desktop) {
+            padding-right: 3em;
+            padding-left: 1em;
+        }
+    }
+
+    .beer-desc {
+        
+    }
+
+    .beer-label {
+        font-style: italic;
+    }
+
+}
+

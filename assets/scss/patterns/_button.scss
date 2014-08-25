@@ -1,0 +1,14 @@
+%aquanaut-button {
+    @extend .btn;
+    @extend .btn-default;
+    border-color: currentColor;
+    font-weight: bold;
+    padding: 1em 3em 1em;
+    @include border-radius(0);
+
+    &:hover {
+        background-color: #fff; 
+        border-color: #000
+    }
+}
+

@@ -3,12 +3,13 @@
 /* variables -------------------------------------------------------------------------------- */
 // Font stacks
 $arial: Arial, Helvetica, sans-serif;
-$kepler: Kepler, kepler;
+$kepler: "kepler-std", serif;
 
 
 // Colors
 $brand-primary: #333;
 
+$navbar-default-link-active-bg: #fff;
 
 //** Global textual link color.
 $link-color: $brand-primary;

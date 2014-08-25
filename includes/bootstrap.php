@@ -40,7 +40,9 @@ function sa_load_cpt(){
     $path = __DIR__ . '/custom-post-types/';
 
     $types = array(
-        'events'
+        'events',
+        'beers',
+        'products'
     );
 
     foreach ( $types as $type ) {

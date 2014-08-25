@@ -12,18 +12,21 @@
 @import 'partials/site-header';
 @import 'partials/site-footer';
 @import 'partials/page-contact';
+@import 'partials/beer';
+@import 'partials/product';
 
 // Patterns
 @import 'patterns/home-splash';
 @import 'patterns/post-preview';
 @import 'patterns/social-share';
 @import 'patterns/prev-next';
+@import 'patterns/button';
 
 
 
 body {
     background: #fff;
-    font-size: $font-size-base !important;
+    font-size: $font-size-base;
     line-height: 1.6em;
     color: #333;
     text-rendering: optimizeLegibility;
