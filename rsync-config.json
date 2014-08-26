@@ -1,0 +1,28 @@
+{
+    "options": {
+        "args": ["--verbose"],
+        "exclude": [".git*",".sass*","node_modules/",".DS_Store", "package.json", "Gruntfile.js"],
+        "recursive": true
+    },
+    "stage": {
+        "options": {
+              "src": "./",
+              "dest": "/home/apps/www/current/wp-content/themes/strange-aquanaut",
+              "host": "vm-beer@doejocloud.com"
+          }
+    },
+    "stage_plugins": {
+        "options": {
+            "src": "../../plugins",
+            "dest": "/home/apps/www/current/wp-content/",
+            "host": "vm-beer@doejocloud.com"
+        }
+    },
+    "stage_uploads": {
+        "options": {
+            "src": "../../uploads",
+            "dest": "/home/apps/www/current/wp-content/",
+            "host": "vm-beer@doejocloud.com"
+        }
+    }
+}

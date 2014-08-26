@@ -13,16 +13,23 @@
                         <h5>Event Details</h5>
                         
                         <?php if ( get_field('date') ): ?>
-                        <div><strong>Date</strong> 
-                            <?php echo sa_formatted_event_date() ?>
-                        </div>
+                            <div><strong>Date</strong> 
+                                <?php echo sa_formatted_event_date() ?>
+                            </div>
                         <?php endif ?>
-                        <div><strong>Time</strong> 
-                            <?php the_field('time') ?>
-                        </div>
-                        <div><strong>Place</strong>
-                             <?php the_field('place') ?>
-                        </div>
+                        
+                        <?php if ( get_field( 'time' ) ): ?>
+                            <div><strong>Time</strong> 
+                                <?php echo esc_html( get_field( 'time' ) ); ?>
+                            </div>
+                         <?php endif ?>
+                        
+                        <?php if ( get_field('place') ): ?>
+                            <div><strong>Place</strong>
+                                 <a href="<?php echo esc_html( sa_google_map_url(  get_field( 'place' ) ) ); ?>" target="_blank"><?php echo esc_html( get_field( 'place' ) ); ?></a>
+                            </div>
+                        <?php endif ?>
+
                         <?php if (get_field('event_info')): ?>
                             <div><strong>Info</strong>
                                 <a href="<?php echo esc_attr( get_field( 'event_info' ) ) ?>">

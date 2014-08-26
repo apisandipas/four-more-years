@@ -38,6 +38,11 @@ module.exports = function(grunt) {
             }
         },
 
+        /**
+         *  Extenal config file for Staging deployment
+         */
+        rsync: grunt.file.readJSON('rsync-config.json')
+
         
     });
 

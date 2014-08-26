@@ -90,12 +90,33 @@ function sa_twitter_share(){
     return $twt_path;
 }
 
+
+
+/**
+ * Takes an address string and appends it to a google map search url
+ * @param  {String} $url search url
+ * @return {String}      google maps url + search url
+ */
+function sa_google_map_url($url){
+    return 'http://maps.google.com/?q=' . $url;
+}
+
+
+
+/**
+ * Fetches the Address Lines 1 & 2 and appends to a google maps search url.
+ * @return {String} [description]
+ */
 function sa_address_to_map_url(){
     $line1 = esc_html( get_field( 'address_line_1', 'option' ) );
     $line2 = esc_html( get_field( 'address_line_2', 'option' ) );
 
-    return 'http://maps.google.com/?q=' . $line1 . ' ' . $line2;
+    // return 'http://maps.google.com/?q=' . $line1 . ' ' . $line2;
+    $joined_lines = $line1 . ' ' . $line2;
+     return sa_google_map_url($joined_lines);
 }
+
+
 
 /**
  * Grabs data meta fields value and returns in in desired format
