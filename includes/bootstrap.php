@@ -5,6 +5,12 @@
 require  __DIR__ . '/helpers.php';
 require  __DIR__ . '/template-helpers.php';
 
+/**
+ *  Override queries here using the pre_get_posts hook and 
+ *  conditional functions (is_page, is_home, is_archive, etc)
+ */
+require  __DIR__ . '/query-config.php';
+
 
 /**
  *   3rd party libs

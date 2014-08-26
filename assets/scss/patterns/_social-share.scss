@@ -1,7 +1,7 @@
 .social-share{
     @extend .btn-group;
     @extend .btn-group-justified;
-    
+    margin-bottom: 2em;
     .facebook-share, .twitter-share {
         @extend .btn;
         @extend .btn-default;

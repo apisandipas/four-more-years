@@ -1,13 +1,12 @@
 <?php get_header(); ?>
-<div class="beer-detail-bg" style="background-image: url(<?php the_field('background_image'); ?>);">
-    <div class="container" height="100%">
-        <div class="row" height="100%">
-            <div class="col-md-5 col-md-offset-1" height="100%">
+<div class="beer-detail-bg" style="background-image: url(<?php the_field('background_image', 48); ?>);">
+    <div class="container page-wrap" >
+        <div class="row" >
+            <div class="col-md-5 col-md-offset-1 " >
                 <?php  while ( have_posts() ) : the_post(); ?>
                     
 
-                    <div class="beer-meta-wrap">
-                        <div class="beer-meta">
+                        <div class="beer-meta" id="beer-<?php the_ID(); ?> ">
                             
                             <h2 class="post-title"><?php the_title(); ?></h2>  
 
@@ -51,18 +50,24 @@
                             </table>
 
                         </div><!-- beer-meta -->
-                    </div><!-- beer-meta-wrap -->
+                        
 
 
-                   <!--  <div class="prev-next-links">
-                        <?php //previous_post_link('%link', '<div class="previous-post">Back</div>'); ?> 
-                        <?php //next_post_link('%link', '<div class="next-post">Next</div>'); ?> 
-                    </div> -->
-                     
+                    
                 
                 <?php  endwhile; // end of the loop. ?>
-           </div><!-- cols -->
+            </div><!-- cols -->
+            
+
+                     
        </div><!-- .row -->
+       
+        <div class="prev-next-links">
+            <?php previous_post_link('%link', '<div class="previous-post"></div>'); ?> 
+            <?php next_post_link('%link', '<div class="next-post"></div>'); ?> 
+        </div>
+      
+            
     </div><!-- .container -->
 </div><!-- beer-detail-bg -->
     

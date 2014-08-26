@@ -1,0 +1,44 @@
+.post-type-archive-event {
+    .event-back {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        > .container {
+            border-bottom: 1px solid;
+        }
+    }
+    .event {
+        background: #fff;
+        padding: 50px;
+        border: 1px solid;
+        border-bottom: 0;
+        h2  {
+            margin: 0 0 0.5em;
+        }
+    }
+    // Prevents double borders by removing borders from the first item in each row.
+    @include respond-to($desktop) {
+        .row > .event:first-child {
+            border-right: 0;
+        }
+    }
+    .event-title {
+        font-style: italic;
+        font-weight: bold;
+    }
+    .event-details {
+
+        border: 1px solid;
+        padding: 1em;
+        font-size: 14px;
+        h5 {
+            font-weight: bold;
+            margin: 0 0 1em;
+        }
+        strong {
+            width: 45px;
+            display: inline-block;
+        }
+    }
+}
+

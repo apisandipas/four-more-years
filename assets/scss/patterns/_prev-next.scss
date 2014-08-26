@@ -1,29 +1,52 @@
-.page-overlap {
+.page-wrap {
     position: static;
     .prev-next-links{
-        padding: 1em;
         position: relative;
-        a { 
-            display: inline-block;
-        }
-        .previous-post {
-            @include use-sprite('arrow-left');
-        }
-        .next-post{
-            @include use-sprite('arrow-right');
-        }
-        a[rel="next"] { 
-            float: right;
-        }
     }
 }
+
+
+.prev-next-links{
+    padding: 1em;
     
+    .previous-post {
+        @include use-sprite('arrow-left');
+        .single-beer & {
+            @include use-sprite('arrow-left-white');
+            @include respond-to($desktop) {
+                margin-left: 90px;
+                left: 0;
+            }
+
+        }
+    }
+
+    .next-post{
+        @include use-sprite('arrow-right');
+        .single-beer & {
+            @include use-sprite('arrow-right-white');
+            @include respond-to($desktop) {
+                margin-right: 90px;
+                right: 0;
+            }
+        }
+    } 
+
+    a { 
+        display: inline-block;
+    }
+   
+    a[rel="next"] { 
+        float: right;
+    }
+}
+
 
 
 // Handles the positioning for Desktop views where arrows are positioned half 
 // way down the page, -50px on the outside of the container
 @include respond-to($desktop) {
-    .page-overlap {
+    .page-wrap {
         position: relative;
         .prev-next-links{
             position: static;

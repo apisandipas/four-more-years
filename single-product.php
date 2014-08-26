@@ -1,12 +1,16 @@
 <?php get_header(); ?>
 
     <div class="container">
+
         <div class="product row">
-                
+
+            
                 <?php  while ( have_posts() ) : the_post(); ?>
+
                     <div class="col-md-4 col-md-offset-2">
                         <?php the_post_thumbnail('product-detail'); ?>
                     </div>
+
                     <div class="col-md-4">
                         <div class="product-title"><?php the_title(); ?></div>
 
@@ -20,14 +24,17 @@
                     </div>
 
                 <?php  endwhile; // end of the loop. ?>
+        </div><!-- .row -->
 
-                    <div class="prev-next-links">
-                        <?php previous_post_link('%link', '<div class="previous-post">Back</div>'); ?> 
-                        <?php next_post_link('%link', '<div class="next-post">Next</div>'); ?> 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                 <div class="prev-next-links">
+                        <?php previous_post_link('%link', '<div class="previous-post"></div>'); ?> 
+                        <?php next_post_link('%link', '<div class="next-post"></div>'); ?> 
                     </div> 
-                     
-                
-       </div><!-- .row -->
+            </div>
+        </div>
+
     </div><!-- .container -->
 
     

@@ -96,3 +96,15 @@ function sa_address_to_map_url(){
 
     return 'http://maps.google.com/?q=' . $line1 . ' ' . $line2;
 }
+
+/**
+ * Grabs data meta fields value and returns in in desired format
+ * @param  [type] $fmt PHP
+ * @return [String]     formatted date string
+ * @requires ( PHP 5 >= 5.2.0 );
+ */
+function sa_formatted_event_date($fmt = 'F j, o'){
+    global $post;
+    $date = DateTime::createFromFormat( 'Ymd', get_field('date', $post->ID ) );
+    return $date->format($fmt);
+}

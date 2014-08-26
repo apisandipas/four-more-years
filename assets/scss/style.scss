@@ -14,6 +14,7 @@
 @import 'partials/page-contact';
 @import 'partials/beer';
 @import 'partials/product';
+@import 'partials/event';
 
 // Patterns
 @import 'patterns/home-splash';
@@ -87,7 +88,10 @@ p {
 .post-title {
     font-style: italic;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 40px;
     margin-top: 0;
     margin-bottom: 0.5em;
+    @include respond-to($desktop) {
+        font-size: 60px;
+    }
 }

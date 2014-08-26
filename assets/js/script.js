@@ -31,12 +31,24 @@
                 if (win) e.preventDefault();
             });
 
+            $(".toggleNav").click(function () {
+                $(".toggleNavButton").toggleClass("active");
+            });
+
+            // Calls set equal height on load and on each recurring window resize
+            $(window).on('resize', setEventHeights).trigger('resize');
     });
 
-    $(".toggleNav").click(function () {
-        $(".toggleNavButton").toggleClass("active");
-     });
+   
 
+    
+    // Calls set equal height on load and on each recurring window resize
+    // TODO: call in underscore an utilize debounce function to limit the calling of onResize event.
+    function setEventHeights(){
+        console.log('setEventHeights');
+        $('.post-type-archive-event .event').equalHeights();
+    }
 
+    
 
 })(jQuery);

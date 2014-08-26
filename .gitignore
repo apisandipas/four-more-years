@@ -34,3 +34,7 @@ node_modules
 ### Sass ###
 .sass-cache
 
+### GeneratedCompass Sprite Sheets ####
+assets/img/icons-2x-*
+assets/img/icons-*
+
