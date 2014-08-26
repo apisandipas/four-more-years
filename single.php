@@ -11,10 +11,10 @@
            
 
                 <div class="social-share">
-                    <a href="<?php echo sa_facebook_share(); ?>" role="button" class="facebook-share btn btn-default" data-window-title="Share on Facebook">
+                    <a href="<?php echo sa_facebook_share(); ?>" role="button" class="facebook-share" data-window-title="Share on Facebook">
                         <span class="facebook-sm"></span> Share
                     </a>
-                    <a href="<?php echo sa_twitter_share(); ?>" role="button" class="twitter-share btn btn-default" data-window-title="Share on Twitter">
+                    <a href="<?php echo sa_twitter_share(); ?>" role="button" class="twitter-share" data-window-title="Share on Twitter">
                         <span class="twitter-sm"></span> Tweet
                     </a>
                 </div>

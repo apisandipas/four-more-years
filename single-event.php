@@ -3,13 +3,10 @@
     <div class="container">
         <div class="row">
          
-            <?php $j = 0; while ( have_posts() ) : the_post(); ?>
-                <div class="col-md-4 <?php if (++$j % 2 == 1): ?>col-md-offset-2 <?php endif; ?> event">
+            <?php while ( have_posts() ) : the_post(); ?>
+                <div class="col-md-8 col-md-offset-2 event">
 
-                    <h2 class="event-title">
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>    
-                    </h2>  
-                    
+                    <h2 class="event-title"><?php the_title(); ?></h2>  
                     <?php the_content(); ?>
 
                     <div class="event-details">
@@ -55,10 +52,7 @@
                     </div>
                 </div>
 
-                <?php if ($j % 2 == 0): ?>
-                </div><!-- .row -->
-                <div class="row">
-                <?php endif; ?>
+                
 
             <?php endwhile; ?>
 

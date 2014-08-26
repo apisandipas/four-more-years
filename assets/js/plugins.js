@@ -13,11 +13,6 @@
  *
  * Usage: $(object).equalHeights([minHeight], [maxHeight]);
  * 
- * Example 1: $(".cols").equalHeights(); Sets all columns to the same height.
- * Example 2: $(".cols").equalHeights(400); Sets all cols to at least 400px tall.
- * Example 3: $(".cols").equalHeights(100,300); Cols are at least 100 but no more
- * than 300 pixels tall. Elements with too much content will gain a scrollbar.
- * 
  */
 
   $.fn.equalHeights = function(minHeight, maxHeight) {

@@ -13,9 +13,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!-- <script type="text/javascript" src="//use.typekit.net/pya1bxs.js"></script>
-     <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
-
     <?php sa_load_typekit('pya1bxs'); ?>
     
     <?php wp_head(); ?>

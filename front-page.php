@@ -9,14 +9,9 @@
         </div> 
              
        
-        <a href="#" class="home-splash__button ">Take A Taste</a>
+        <a href="<?php echo home_url('/beers'); ?>" class="home-splash__button ">Take A Taste</a>
     </div>    
            
-
-<div class="demo">
-    <div class="demo__header"></div>   
-    <div class="demo__footer"></div>   
-</div>
 
 </section>
 <?php get_footer(); ?>

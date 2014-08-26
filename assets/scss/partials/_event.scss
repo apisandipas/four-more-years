@@ -1,4 +1,4 @@
-.post-type-archive-event {
+.post-type-archive-event, .single-event {
     .event-back {
         background-size: cover;
         background-repeat: no-repeat;
@@ -29,6 +29,7 @@
     .event-details {
 
         border: 1px solid;
+        border-bottom: none;
         padding: 1em;
         font-size: 14px;
         h5 {
@@ -38,6 +39,52 @@
         strong {
             width: 45px;
             display: inline-block;
+        }
+    }
+    .event-social-btns {
+        @extend .btn-group;
+        @extend .btn-group-justified;
+        a { 
+            @extend %aquanaut-button; 
+            padding: 0.5em 1.5em 0.5em !important;
+            border-top: 0;
+            &:hover {
+                background: #fff !important;
+                border-color: #000 !important;
+            }
+            &:first-child {
+                border-right: 1px solid #fff; 
+            }
+            &:first-child:hover {
+                border-right: 1px solid #fff !important;
+            }
+        }
+        .facebook-share, .twitter-share {
+            @extend .btn;
+            @extend .btn-default;
+            border: 1px solid black;
+            border-radius: 0;
+        }
+
+        a.twitter-share.btn-default {
+            min-width: 144px !important;
+            // fixed something weird with borders
+        }
+
+        .facebook-sm { 
+            @include use-sprite('facebook-sm'); 
+            display: inline-block;
+            margin-right: 0.5em;
+            position: relative;
+            top: 3px;
+            
+        }
+        .twitter-sm { 
+            @include use-sprite('twitter-sm'); 
+            display: inline-block; 
+            margin-right: 0.5em; 
+            position: relative;
+            top: 3px;
         }
     }
 }

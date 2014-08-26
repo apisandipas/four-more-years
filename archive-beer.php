@@ -6,7 +6,8 @@
 
                 <div class="beer" id="beer-<?php the_ID(); ?>" style="">
                     <a href="<?php the_permalink(); ?>">
-                        <img src="http://placekitten.com/308/308">
+                        <!-- <img src="http://placekitten.com/308/308"> -->
+                        <?php the_post_thumbnail(); ?>
                         <div class="beer-meta" style="text-align:center;">
                             <div class="beer-name"><?php the_title(); ?></div>  
                             <?php //if ( get_field('beer_type') ): ?>

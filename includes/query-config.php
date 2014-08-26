@@ -24,6 +24,7 @@ function an_pre_get_posts( $query ) {
 
         // Show all the posts...
         $query->set( 'nopaging', true );
+        $query->set( 'order',   'ASC' );
     
     }
 
