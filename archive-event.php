@@ -45,11 +45,10 @@
                         
                     </div>
                     <div class="event-social-btns">
-                        <!-- <a href="<?php echo sa_facebook_share(); ?>" class="facebook-share btn btn-default"> -->
-                        <a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="facebook-share btn btn-default">
+                        <a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="facebook-share">
                             <span class="facebook-sm"></span>Share
                         </a>
-                        <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode( get_the_permalink() ); ?>&hashtags=aquanautbrewingco&text=<?php the_title(); ?>" class="twitter-share btn-default">
+                        <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode( get_the_permalink() ); ?>&hashtags=aquanautbrewingco&text=<?php the_title(); ?>" class="twitter-share">
                             <span class="twitter-sm"></span>Tweet
                         </a>
                     </div>

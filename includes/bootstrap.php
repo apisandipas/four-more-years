@@ -26,6 +26,7 @@ function sa_load_features(){
     $path = __DIR__ . '/features/';
 
     $features = array(
+        'favicons',
         'wp-head-cleanup',
         'customize-admin',
         'no-image-dimensions',

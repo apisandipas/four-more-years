@@ -42,34 +42,40 @@
         }
     }
     .event-social-btns {
-        @extend .btn-group;
-        @extend .btn-group-justified;
-        a { 
-            @extend %aquanaut-button; 
-            padding: 0.5em 1.5em 0.5em !important;
-            border-top: 0;
-            &:hover {
-                background: #fff !important;
-                border-color: #000 !important;
-            }
-            &:first-child {
-                border-right: 1px solid #fff; 
-            }
-            &:first-child:hover {
-                border-right: 1px solid #fff !important;
-            }
-        }
-        .facebook-share, .twitter-share {
-            @extend .btn;
-            @extend .btn-default;
-            border: 1px solid black;
-            border-radius: 0;
-        }
+        // margin-left: 1px;
+        // @extend .btn-group;
+        // @extend .btn-group-justified;
 
-        a.twitter-share.btn-default {
-            min-width: 144px !important;
-            // fixed something weird with borders
+        a { 
+            // border: 0;
+            // @extend %aquanaut-button; 
+            padding: 0.5em 1.5em 0.5em !important;
+            // border-top: 0;
+            display: inline-block;
+         
+            // &:hover {
+                // background: #fff !important;
+            //     border-color: #000 !important;
+            // }
+            // &:first-child {
+            //     width: calc(50% - 3px);
+            //     border-right: 1px solid #fff; 
+            // }
+            // &:first-child:hover {
+            //     // border-right: 1px solid #fff !important;
+            // }
         }
+        // .facebook-share, .twitter-share {
+            // @extend .btn;
+            // @extend .btn-default;
+            // border: 1px solid black;
+            // border-radius: 0;
+        // }
+
+    //     // a.twitter-share.btn-default {
+    //     //     min-width: 144px !important;
+    //     //     // fixed something weird with borders
+    //     // }
 
         .facebook-sm { 
             @include use-sprite('facebook-sm'); 
