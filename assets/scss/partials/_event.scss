@@ -29,8 +29,8 @@
     .event-details {
 
         border: 1px solid;
-        border-bottom: none;
-        padding: 1em;
+        // border-bottom: none;
+        .inner { padding: 1em; }
         font-size: 14px;
         h5 {
             font-weight: bold;
@@ -42,40 +42,17 @@
         }
     }
     .event-social-btns {
-        // margin-left: 1px;
-        // @extend .btn-group;
-        // @extend .btn-group-justified;
 
+        border-top: 1px solid #000; 
         a { 
-            // border: 0;
-            // @extend %aquanaut-button; 
-            padding: 0.5em 1.5em 0.5em !important;
-            // border-top: 0;
+            border: 0 !important;
+            @extend %aquanaut-button; 
+            padding: 1em!important; 
             display: inline-block;
-         
-            // &:hover {
-                // background: #fff !important;
-            //     border-color: #000 !important;
-            // }
-            // &:first-child {
-            //     width: calc(50% - 3px);
-            //     border-right: 1px solid #fff; 
-            // }
-            // &:first-child:hover {
-            //     // border-right: 1px solid #fff !important;
-            // }
+            text-align: center;
+            width: calc(50% - 3px);
         }
-        // .facebook-share, .twitter-share {
-            // @extend .btn;
-            // @extend .btn-default;
-            // border: 1px solid black;
-            // border-radius: 0;
-        // }
 
-    //     // a.twitter-share.btn-default {
-    //     //     min-width: 144px !important;
-    //     //     // fixed something weird with borders
-    //     // }
 
         .facebook-sm { 
             @include use-sprite('facebook-sm'); 

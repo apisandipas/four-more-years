@@ -11,47 +11,49 @@
                     </h2>  
                     
                     <?php the_content(); ?>
-
+                    
                     <div class="event-details">
-                        <h5>Event Details</h5>
-                        
-                        <?php if ( get_field('date') ): ?>
-                            <div><strong>Date</strong> 
-                                <?php echo sa_formatted_event_date() ?>
-                            </div>
-                        <?php endif ?>
-                        
-                        <?php if ( get_field( 'time' ) ): ?>
-                            <div><strong>Time</strong> 
-                                <?php echo esc_html( get_field( 'time' ) ); ?>
-                            </div>
-                         <?php endif ?>
-                        
-                        <?php if ( get_field('place') ): ?>
-                            <div><strong>Place</strong>
-                                 <a href="<?php echo esc_html( sa_google_map_url(  get_field( 'place' ) ) ); ?>" target="_blank"><?php echo esc_html( get_field( 'place' ) ); ?></a>
-                            </div>
-                        <?php endif ?>
+                        <div class="inner">
+                            <h5>Event Details</h5>
+                            
+                            <?php if ( get_field('date') ): ?>
+                                <div><strong>Date</strong> 
+                                    <?php echo sa_formatted_event_date() ?>
+                                </div>
+                            <?php endif ?>
+                            
+                            <?php if ( get_field( 'time' ) ): ?>
+                                <div><strong>Time</strong> 
+                                    <?php echo esc_html( get_field( 'time' ) ); ?>
+                                </div>
+                             <?php endif ?>
+                            
+                            <?php if ( get_field('place') ): ?>
+                                <div><strong>Place</strong>
+                                     <a href="<?php echo esc_html( sa_google_map_url(  get_field( 'place' ) ) ); ?>" target="_blank"><?php echo esc_html( get_field( 'place' ) ); ?></a>
+                                </div>
+                            <?php endif ?>
 
-                        <?php if (get_field('event_info')): ?>
-                            <div><strong>Info</strong>
-                                <a href="<?php echo esc_attr( get_field( 'event_info' ) ) ?>">
-                                    <?php echo esc_attr( get_field( 'event_info') ); ?>
-                                </a>
-                            </div>
-                        <?php endif; ?>
+                            <?php if (get_field('event_info')): ?>
+                                <div><strong>Info</strong>
+                                    <a href="<?php echo esc_attr( get_field( 'event_info' ) ) ?>">
+                                        <?php echo esc_attr( get_field( 'event_info') ); ?>
+                                    </a>
+                                </div>
+                            <?php endif; ?>
+                        </div><!-- inner -->
 
-
-                        
+                        <div class="event-social-btns">
+                            <a style=" display: inline-block; border-right: 1px solid #000 !important;"href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="facebook-share bbtn">
+                                <span class="facebook-sm"></span>Share
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode( get_the_permalink() ); ?>&hashtags=aquanautbrewingco&text=<?php the_title(); ?>" class="twitter-share bbtn">
+                                <span class="twitter-sm"></span>Tweet
+                            </a>
+                        </div>
                     </div>
-                    <div class="event-social-btns">
-                        <a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" class="facebook-share">
-                            <span class="facebook-sm"></span>Share
-                        </a>
-                        <a href="https://twitter.com/intent/tweet?url=<?php echo urlencode( get_the_permalink() ); ?>&hashtags=aquanautbrewingco&text=<?php the_title(); ?>" class="twitter-share">
-                            <span class="twitter-sm"></span>Tweet
-                        </a>
-                    </div>
+ 
+
                 </div>
 
                 <?php if ($j % 2 == 0): ?>
