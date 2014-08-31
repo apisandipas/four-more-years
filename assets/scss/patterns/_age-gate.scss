@@ -1,0 +1,38 @@
+$modal-backdrop-bg: #000;
+$modal-backdrop-opacity: 0.75;
+
+.age-gate {
+    
+    &__content {
+        margin-top: 33%;
+        color: #fff;
+        text-align: center;
+        h3 {
+            font-style: italic;
+            font-size: 28px;
+            padding: 10px;
+            @include respond-to($medium) {
+                padding: 0;
+            }
+            @include respond-to($desktop) {
+                padding: 0;
+                font-size: 32px;
+            }
+        }
+        button {
+            @extend %aquanaut-button;
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            @include respond-to($medium) {
+                display: inline-block;
+                margin: 45px 0;
+                width: auto;
+            }
+        }
+
+        @include respond-to($desktop) {
+            margin-top: 20%;
+        }
+    }
+}

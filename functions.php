@@ -47,7 +47,9 @@ function sa_enqueue_scripts() {
     wp_enqueue_script( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js', array('jquery'), SA_VERSION_NUMBER);
     wp_enqueue_script( 'plugins', get_template_directory_uri() . '/assets/js/plugins.js', array('jquery'), SA_VERSION_NUMBER,  true );
     wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), SA_VERSION_NUMBER,  true );
+
 }
+
 
 /**
  *  Register Navigation Menus

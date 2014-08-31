@@ -39,6 +39,8 @@
 
             // Calls set equal height on load and on each recurring window resize
             $(window).on('resize', setEventHeights).trigger('resize');
+
+
     });
 
    
@@ -53,3 +55,66 @@
     
 
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+/**
+ * Age Gate
+ */
+;(function($){
+
+
+    /**
+     * [verifyAge description]
+     * @return {[type]} [description]
+     */
+    function verifyAge(){
+        // fire modal for age verification
+        $('.age-gate').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+
+        // 
+        // Set up event listen for "Yes" button.
+        $('.of-age').click(function(){
+            
+            // set cookie here.Expires in 1 year.
+            $.cookie("aquanaut-age-verified", 1, {expires: 999, path: '/'});
+            
+            // Close modal
+            $('.age-gate').modal('hide');
+        });
+            
+        $('.not-of-age').click(function(){
+            window.location = "http://disneychannel.com"
+        }); // "No" button links to something SFW
+    }
+
+
+    $(function(){
+
+        var ageVerified = $.cookie('aquanaut-age-verified');
+
+        if (typeof ageVerified == "undefined") {
+
+            console.log('cookie is not present: %s', ageVerified);
+
+            // fire verifyAge
+            verifyAge();
+            
+        } else {// a cookie is present
+            // No need to read the cookie as it wouldnt have been set previously 
+            // for an answer of under 21, so if cookie is value, good enough.
+            console.log('cookie is present: %s', ageVerified);
+        }
+     
+    });
+})(jQuery)

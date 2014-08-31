@@ -33,6 +33,7 @@ module.exports = function(grunt) {
             build: {
                 options: {
                     config: "config.rb",
+                    bundleExec: true,
                     sourcemap: true
                 }
             }

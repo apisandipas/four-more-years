@@ -4,6 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "scripts": {
+    "postinstall" : "bundle install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
