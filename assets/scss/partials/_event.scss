@@ -2,7 +2,8 @@
     .event-back {
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: top center;
+        background-position: center center;
+        background-attachment: fixed;
         > .container {
             border-bottom: 1px solid;
         }

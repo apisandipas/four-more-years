@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <img src="http://placekitten.com/1400/400" alt="" width="100%" height="auto" style="display: block">
+    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/working.jpg" alt="" width="100%" height="auto" style="display: block">
     <div class="container">
         <div class="row">
             <div class="post-previews">

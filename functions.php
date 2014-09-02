@@ -19,6 +19,7 @@ require_once dirname(__FILE__). '/includes/bootstrap.php';
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 308, 308 , true); // Used in the Beer and Product grids. poorly named :>
     add_image_size('product-detail', 450, 450, true); // Used in the Product detail pages.
+    add_image_size('background-image', 2200, 800); // Used for full-sized bg images
 
 
  }

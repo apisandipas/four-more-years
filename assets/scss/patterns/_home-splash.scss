@@ -1,9 +1,22 @@
 .home-splash {
-    background: url(http://placekitten.com/2200/600) top center no-repeat; 
-    min-height:600px;
+    // background-image: url(http://placekitten.com/2200/600) ; 
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 800px;
+    height: 400px;
     color: #fff;
     display: table;
     width: 100%;
+    @include respond-to($medium) {
+        height: 600px;
+    }
+    @include respond-to($desktop) {
+        height: 800px;
+    }
+    // @include respond-to($large-desktop) {
+    //     height: 8000px;
+    // }
     &__inner {
         display: table-cell;
         text-align: center;
