@@ -68,6 +68,7 @@
     </div><!-- .container -->
 </div><!-- .contact-map -->
 
-    
+    <h3>Tour</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas impedit, atque doloribus ab odit, perferendis alias tempore laboriosam consequatur exercitationem natus laudantium iusto eaque quia aliquam cum quo accusamus.    </p>
     
 <?php get_footer(); ?>
