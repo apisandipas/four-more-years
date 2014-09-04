@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="beer-detail-bg" style="background-image: url(<?php the_field('background_image', 48); ?>);">
+<div class="beer-detail-bg" style="background-image: url(<?php the_field('background_image'); ?>);" height="700">
     <div class="container page-wrap" >
         <div class="row" >
             <div class="col-md-5 col-md-offset-1 " >
@@ -7,7 +7,6 @@
                     
 
                         <div class="beer-meta" id="beer-<?php the_ID(); ?> ">
-                            
                             <h2 class="post-title"><?php the_title(); ?></h2>  
 
                             <div class="beer-desc"><?php the_content(); ?></div> 

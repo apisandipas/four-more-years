@@ -129,3 +129,4 @@ function sa_formatted_event_date($fmt = 'F j, o'){
     $date = DateTime::createFromFormat( 'Ymd', get_field('date', $post->ID ) );
     return $date->format($fmt);
 }
+
