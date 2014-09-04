@@ -28,6 +28,7 @@
 .sticky-header {
     @extend .navbar;
     @extend .navbar-default;
+    border-radius: 0 !important;
     z-index: 999;
     display: block;
     position: fixed; 

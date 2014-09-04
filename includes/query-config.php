@@ -16,7 +16,7 @@ function an_pre_get_posts( $query ) {
     if ( is_admin() )  return $query;
     
     
-    // in the beer archive.. and in the product archive (Store) 
+    // in the beer, product and event archive
     if ( $query->is_main_query() 
             && $query->is_post_type_archive('beer') 
             || $query->is_post_type_archive('product')
@@ -25,6 +25,17 @@ function an_pre_get_posts( $query ) {
         // Show all the posts...
         $query->set( 'nopaging', true );
         $query->set( 'order',   'ASC' );
+    
+    }
+
+    // in JUST the beer and product archives
+    if ( $query->is_main_query() 
+            && $query->is_post_type_archive('beer') 
+            || $query->is_post_type_archive('product') ) {
+
+        // Set to use menu order so beer and products can 
+        // be ordered by drag and drop interface via Metronet Reorder Posts Plugin
+        $query->set( 'orderby',   'menu_order' );
     
     }
 
