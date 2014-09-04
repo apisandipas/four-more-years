@@ -1,4 +1,5 @@
 # AquanautBrewery.com
+Require PHP 5.2+
 
 ## theme: Strange Aquanaut
 
