@@ -1,6 +1,8 @@
 
 <footer class="site-footer">
-   <div class="copyright"></div>
-   <div class="social"></div>
+   <div class="copyright">
+    <span class="icon-made-by-doejo"></span>
+   </div>
+   <div class="social">&nbsp;</div>
 </footer><!-- site-footer -->
 

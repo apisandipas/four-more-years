@@ -1,13 +1,23 @@
-// $icons-spacing: 20px;
-// $icons-2x-spacing: 20px;
-// $icons-sprite-dimensions: true;
-// $icons-2x-sprite-dimensions: true;
-// @import "icons/*.png";              
-// @include all-icons-sprites;
-// @import "icons-2x/*.png";              
-// @include all-icons-2x-sprites;
+.sprite {
+    background-image: url(../sprites.png);
+    background-repeat: no-repeat;
+}
 
+.icon-made-by-doejo {
+    @extend .sprite;
+    background-position: 0 0;
+    width: 119px;
+    height: 23px;
+}
 
+.icon-twitter {
+    background-position: -125px -1px;
+    width: 22px;
+    height: 22px;
+}
 
-// $icons: sprite-map("icons/*.png", $layout: smart);
-// $icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
+.icon-facebook{
+    background-position: -152px 0;
+    width: 22px;
+    height: 22px;
+}
