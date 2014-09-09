@@ -9,11 +9,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php sa_site_title(); ?></title>
+    <title><?php dnd_site_title(); ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <?php sa_load_typekit('pya1bxs'); ?>
+    <?php dnd_load_typekit('fmr1eon'); ?>
     
     <?php wp_head(); ?>
     

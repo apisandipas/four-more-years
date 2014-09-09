@@ -1,7 +1,7 @@
 <?php 
 
 add_action('wp_head', 'sa_add_app_icons');
-function sa_add_app_icons(){
+function dnd_add_app_icons(){
     ?>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicons/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicons/apple-touch-icon.png" />

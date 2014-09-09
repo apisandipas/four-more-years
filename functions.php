@@ -69,17 +69,17 @@ function navigation_menus() {
 /**
 *  Create a simple sub options page called 'Footer'
 */
-if( function_exists('acf_add_options_sub_page') )
-{
-    acf_add_options_sub_page( 'General' );
-    // acf_add_options_sub_page( 'Social Media' );
-}
+// if( function_exists('acf_add_options_sub_page') )
+// {
+//     acf_add_options_sub_page( 'General' );
+//     // acf_add_options_sub_page( 'Social Media' );
+// }
 
 /**
  *  Whitelist of Post Types to add the drag and drop reorder 
  */
-add_filter( 'metronet_reorder_post_types', 'slug_set_reorder' );
-function slug_set_reorder( $post_types ) {
-    $post_types = array( 'beer', 'product' );
-    return $post_types;
-}
+// add_filter( 'metronet_reorder_post_types', 'slug_set_reorder' );
+// function slug_set_reorder( $post_types ) {
+//     $post_types = array( 'beer', 'product' );
+//     return $post_types;
+// }

@@ -21,12 +21,12 @@ require  __DIR__ . '/lib/bootstrap-walker.php';
 /**
  *  Load 'Features'
  */
-add_action( 'after_setup_theme', 'sa_load_features' );
-function sa_load_features(){
+add_action( 'after_setup_theme', 'dnd_load_features' );
+function dnd_load_features(){
     $path = __DIR__ . '/features/';
 
     $features = array(
-        'favicons',
+        // 'favicons',
         'wp-head-cleanup',
         'customize-admin',
         'no-image-dimensions',
@@ -42,14 +42,14 @@ function sa_load_features(){
 /**
  *  Load 'Custom Post Types'
  */
-add_action( 'after_setup_theme', 'sa_load_cpt' );
-function sa_load_cpt(){
+add_action( 'after_setup_theme', 'dnd_load_cpt' );
+function dnd_load_cpt(){
     $path = __DIR__ . '/custom-post-types/';
 
     $types = array(
-        'events',
-        'beers',
-        'products'
+        // 'events',
+        // 'beers',
+        // 'products'
     );
 
     foreach ( $types as $type ) {

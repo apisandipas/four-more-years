@@ -1,21 +1,6 @@
 
 <footer class="site-footer">
-    <div class="container">
-        <div class="row">
-        
-            <div class="social">
-                <ul>
-                    <li><a href="<?php echo esc_attr( get_field('facebook_url', 'option') ); ?>" target="_blank" class="facebook"></a></li>
-                    <li><a href="<?php echo esc_attr( get_field('instagram_url', 'option') ); ?>" target="_blank" class="instagram"></a></li>
-                    <li><a href="<?php echo esc_attr( get_field('twitter_url', 'option') ); ?>" target="_blank" class="twitter"></a></li>
-                </ul>
-            </div>
-
-            <div class="copy">
-                &copy; <?php echo sa_copyright_range(); ?> <?php bloginfo( 'name' ); ?> 
-            </div>
-
-        </div><!-- row -->
-    </div><!-- container -->
+   <div class="copyright"></div>
+   <div class="social"></div>
 </footer><!-- site-footer -->
 

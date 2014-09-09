@@ -1,22 +1,50 @@
+/* Grid settings-------------------------------------------------------------------------------- */
+$fixed-grid-width:      960px;
+
+/*Typography -------------------------------------------------------------------------------- */
+$base-font-size:        20px !default;
+$base-line-height:      28px  !default;
+$base-font-color:       #fff;
+
+$base-link-color:        $base-font-color;
+$base-link-color--hover: $base-font-color;
 
 
-/* variables -------------------------------------------------------------------------------- */
-// Font stacks
+/* Font stacks -------------------------------------------------------------------------------- */
 $arial: Arial, Helvetica, sans-serif;
-$kepler: "kepler-std", serif;
+$interface: "interface", serif;
 
 
-// Colors
-$brand-primary: #333;
+/* Breakpoints  -------------------------------------------------------------------------------- */
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
 
-$navbar-default-link-active-bg: #fff;
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
 
-//** Global textual link color.
-$link-color: $brand-primary;
-$link-hover-color: darken($link-color, 15%);
-$font-family-serif: $kepler;
-$font-family-base: $font-family-serif;
-$font-size-base: 16px;
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
 
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+// Media Queries for use with respond-to mixin
+$small:              "max-width: #{$screen-xs-max}" !default;
+$medium:             "min-width: #{$screen-sm-min}" !default;
+$desktop:            "min-width: #{$screen-md-min}" !default;
+$large-desktop:      "min-width: #{$screen-lg-min}" !default;
 
 

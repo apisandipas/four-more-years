@@ -1,96 +1,28 @@
-/* Assistive text */
-.assistive-text {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-}
-.assistive-text:active,
-.assistive-text:focus {
-    clip: auto !important;
-    font-size: 12px;
-    position: absolute;
-    text-decoration: underline;
-    top: 0;
-    left: 7.6%;
+@import 'mixins/accessibility';
+@import 'mixins/vendor-prefixes';
+@import 'mixins/triangle';
+@import 'mixins/retina-sprite';
+@import 'mixins/ghost-vertical-align';
+@import 'mixins/respond-to';
+
+
+
+%foreground-red {
+    color: red;
+    background: white;
 }
 
-
-
-// Media Queries
-$small:              "max-width: #{$screen-xs-max}";
-$medium:             "min-width: #{$screen-sm-min}";
-$desktop:            "min-width: #{$screen-md-min}";
-$large-desktop:      "min-width: #{$screen-lg-min}";
-
-
-@mixin respond-to($query) {
-    @media only screen and (#{$query})  {
-        @content;
-    }
+%foreground-white{
+    color: white;
+    background: red;
 }
 
 
-/* 
-* @include triangle within a pseudo element and add positioning properties (ie. top, left)
-* $direction: up, down, left, right
-*/
-@mixin triangle($direction, $size: 6px, $color: #222){
-  content: '';
-  display: block;
-  position: absolute;
-  height: 0; width: 0;
-  @if ($direction == 'up'){
-    border-bottom: $size solid $color;
-    border-left: 1/2*$size solid transparent;
-    border-right: 1/2*$size solid transparent;
-  }
-  @else if ($direction == 'down'){
-    border-top: $size solid $color;
-    border-left: 1/2*$size solid transparent;
-    border-right: 1/2*$size solid transparent;
-  }
-  @else if ($direction == 'left'){
-    border-top: 1/2*$size solid transparent;
-    border-bottom: 1/2*$size solid transparent;
-    border-right: $size solid $color;
-  }
-  @else if ($direction == 'right'){
-    border-top: 1/2*$size solid transparent;
-    border-bottom: 1/2*$size solid transparent;
-    border-left: $size solid $color;
-  }
-}
 
-// Vertical alignment in box on any size
-@mixin ghostVerticalAlign(){
-    &:before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%; width: .1px;
-    }
-}
 
-// Retina sprite mixin
-// name the normal and retina versions with same filename
-// placing the normal version in /icons and the retina in /icons-2x
-@mixin use-sprite($sprite) {
-    background-image: sprite-url($icons);
-    background-position: sprite-position($icons, $sprite);
-    background-repeat: no-repeat;
-    overflow: hidden;
-    display: block;
-    height: image-height(sprite-file($icons, $sprite));
-    width: image-width(sprite-file($icons, $sprite));
 
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        background-image: sprite-url($icons-2x);
-        background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
-        background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
-        height: image-height(sprite-file($icons-2x, $sprite)) / 2;
-        width: image-width(sprite-file($icons-2x, $sprite)) / 2;
-    }
-}
+
+
 
 
 

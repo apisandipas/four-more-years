@@ -5,7 +5,7 @@
  * 
  *    Page Title  |  Site Title  | Site Description (on home page/blog) |  Page # (on paginated pages) 
  */
-function sa_site_title(){
+function dnd_site_title(){
     global $page, $paged;
 
     wp_title( '|', true, 'right' ); 
@@ -22,10 +22,10 @@ function sa_site_title(){
 }
 
 /**
- * [sa_load_typekit description]
+ * [dnd_load_typekit description]
  * @return [type] [description]
  */
-function sa_load_typekit($js){
+function dnd_load_typekit($js){
     ?>
     <script type="text/javascript" src="//use.typekit.net/<?php echo $js ?>.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -40,10 +40,10 @@ function sa_load_typekit($js){
 *   @return string
 *
 */
-function sa_copyright_range($start_copyright_year = "2014") {
+function dnd_copyright_range($start_copyright_year = "2014") {
     $current_year = (int) date('Y');
     
-    // Don't display the range if the end year is the same as the start year, instead just display the year
+    // Don't display the range if the end year is the dndme as the start year, instead just display the year
     if( $start_copyright_year >= $current_year ) {
         return $current_year;
     } else {
@@ -56,7 +56,7 @@ function sa_copyright_range($start_copyright_year = "2014") {
  * Formats the date for the blog posts.
  * @return [type] [description]
  */
-function sa_post_date(){
+function dnd_post_date(){
     global $post;
     echo get_the_date('m', $post->ID);?><br><?php
     echo get_the_date('y', $post->ID);
@@ -67,7 +67,7 @@ function sa_post_date(){
  * Grabs the permalink and appends it to the Facebook Sharer service url
  * @return {String} Facebook Share URL
  */
-function sa_facebook_share(){
+function dnd_facebook_share(){
     global $post;
 
     $permalink = urlencode( get_permalink( $post->ID ) );
@@ -81,11 +81,11 @@ function sa_facebook_share(){
  * Appends share text to the Twitter Sharing service url
  * @return {String} Twitter Share URL
  */
-function sa_twitter_share(){
+function dnd_twitter_share(){
     global $post;
 
     $post_title = urlencode( get_the_title( $post ) );
-    $twt_path = "http://twitter.com/share/?text=Aquanaut Brewing Company presents: " . $post_title . ' ' ;
+    $twt_path = "http://twitter.com/share/?text=" . $post_title . ' ' ;
 
     return $twt_path;
 }
@@ -97,36 +97,10 @@ function sa_twitter_share(){
  * @param  {String} $url search url
  * @return {String}      google maps url + search url
  */
-function sa_google_map_url($url){
+function dnd_google_map_url($url){
     return 'http://maps.google.com/?q=' . $url;
 }
 
 
 
-/**
- * Fetches the Address Lines 1 & 2 and appends to a google maps search url.
- * @return {String} [description]
- */
-function sa_address_to_map_url(){
-    $line1 = esc_html( get_field( 'address_line_1', 'option' ) );
-    $line2 = esc_html( get_field( 'address_line_2', 'option' ) );
-
-    // return 'http://maps.google.com/?q=' . $line1 . ' ' . $line2;
-    $joined_lines = $line1 . ' ' . $line2;
-     return sa_google_map_url($joined_lines);
-}
-
-
-
-/**
- * Grabs data meta fields value and returns in in desired format
- * @param  [type] $fmt PHP
- * @return [String]     formatted date string
- * @requires ( PHP 5 >= 5.2.0 );
- */
-function sa_formatted_event_date($fmt = 'F j, o'){
-    global $post;
-    $date = DateTime::createFromFormat( 'Ymd', get_field('date', $post->ID ) );
-    return $date->format($fmt);
-}
 

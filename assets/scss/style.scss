@@ -1,99 +1,71 @@
-@import 'compass/css3';
-@import 'bootstrap/bootstrap-compass';
+@import 'normalize';
 @import 'variables';
-@import 'bootstrap';
-@import 'type';
-@import 'utils';
+@import 'grid';
 @import 'mixins';
-@import 'sprites';
+@import 'type';
 
-// Partials
-@import 'partials/layout';
-@import 'partials/site-header';
-@import 'partials/site-footer';
-@import 'partials/page-contact';
-@import 'partials/page-about';
-@import 'partials/beer';
-@import 'partials/product';
-@import 'partials/event';
-
-// Patterns
-@import 'patterns/home-splash';
-@import 'patterns/post-preview';
-@import 'patterns/social-share';
-@import 'patterns/prev-next';
+/* Patterns */
 @import 'patterns/button';
-@import 'patterns/age-gate';
+
+/* Partials */
+@import 'partials/splash';
 
 
-
-body {
-    background: #fff;
-    font-size: $font-size-base;
-    line-height: 1.6em;
-    color: #333;
-    text-rendering: optimizeLegibility;
-    padding-top: 90px;
-    @include respond-to($desktop) {
-        padding-top: 0;
-    }
-}
-
-.nav > li > a {
-    $pad: 1.25em;
-    padding-left: $pad !important;
-    padding-right: $pad !important;
-}
-
-
-a {
-    color: $brand-primary !important;
-    text-decoration: none;
-    &:hover, &:active { text-decoration: none; }
-}
-
-p {
-    margin-bottom: 1.5em;
-}
-
-.kepler-italic{
-    font-family: $kepler;
-    font-style: italic;
-    font-weight: bold;
-}
-
-
-.page-overlap {
-    @extend .col-md-8;
-    @extend .col-md-offset-2;
-    padding: 2em;
-
-    p:first-of-type:first-letter {
-        float: left !important;
-        font-size: 45px !important;
-        line-height: 45px !important;
-        padding-right: 8px !important;
-        font-weight: bold;
-        padding-top: 5px;
-    }
-
-    @include respond-to($desktop) {
-        position: relative; top: -100px;
-        background: #fff;
-        min-height: 100px;
-        font-size: 18px;
-        padding: 2em 3.5em;
-    }
-   
-}
-
-.post-title {
-    font-style: italic;
-    font-weight: bold;
-    font-size: 40px;
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    @include respond-to($desktop) {
+.copy {
+    @extend %foreground-red;
+    blockquote {
         font-size: 60px;
+        line-height: 1em;
+        font-weight: 900;
+        > cite {
+            font-size: 20px;
+            font-weight: normal;
+            font-style: normal;
+        }
     }
 }
+
+.schedule {
+     @extend %foreground-white;
+}
+
+.rules {
+    @extend %foreground-red; 
+    ol {
+        font-weight: 900;
+        li {
+            margin-bottom: 1.75em;
+            > span {
+                font-weight: normal;
+            }
+        } 
+    }
+}
+
+.sign-up {
+    @extend %foreground-white;
+}
+
+.contact {
+    @extend %foreground-white;
+    background-image: url('../img/secret-phone.jpg');
+    background-position: center;
+    background-color: red;
+    background-size: cover;
+
+    .label {
+        font-weight: 900;
+        display: inline-block;
+        margin-right: 0.5em;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        li {
+            display: inline-block;
+            margin-right: 2em;
+        }
+    }
+}
+

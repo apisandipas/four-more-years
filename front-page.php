@@ -1,19 +1,11 @@
 <?php get_header(); ?>
-<!-- <section class="home-splash" style="background-image: url(<?php the_post_thumbnail('background-image'); ?>); "> -->
-<section class="home-splash" style="background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/img/taps.jpg); ">
-    
-    <div class="home-splash__inner">
-        
-        <div class="home-splash__headline">
-            Welcome to Aquanaut <br>
-            Brewing Company
-        </div> 
-             
-       
-        <a href="<?php echo home_url('/beers'); ?>" class="home-splash__button ">Take A Taste</a>
-    </div>    
-           
 
-</section>
+<?php get_template_part( 'partials/splash' ); ?>
+<?php get_template_part( 'partials/copy' ); ?>
+<?php get_template_part( 'partials/schedule' ); ?>
+<?php get_template_part( 'partials/rules' ); ?>
+<?php get_template_part( 'partials/signup' ); ?>
+<?php get_template_part( 'partials/contact' ); ?>
+
 <?php get_footer(); ?>
 

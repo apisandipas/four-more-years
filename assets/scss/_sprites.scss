@@ -1,13 +1,13 @@
-$icons-spacing: 20px;
-$icons-2x-spacing: 20px;
-$icons-sprite-dimensions: true;
-$icons-2x-sprite-dimensions: true;
-@import "icons/*.png";              
-@include all-icons-sprites;
-@import "icons-2x/*.png";              
-@include all-icons-2x-sprites;
+// $icons-spacing: 20px;
+// $icons-2x-spacing: 20px;
+// $icons-sprite-dimensions: true;
+// $icons-2x-sprite-dimensions: true;
+// @import "icons/*.png";              
+// @include all-icons-sprites;
+// @import "icons-2x/*.png";              
+// @include all-icons-2x-sprites;
 
 
 
-$icons: sprite-map("icons/*.png", $layout: smart);
-$icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
+// $icons: sprite-map("icons/*.png", $layout: smart);
+// $icons-2x: sprite-map("icons-2x/*.png", $layout: smart);

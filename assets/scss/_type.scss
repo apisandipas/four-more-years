@@ -1,0 +1,40 @@
+body {
+    color: $base-font-color;
+    background: #fff;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    text-rendering: optimizeLegibility;
+    font-family: "interface", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5  {
+    font-weight: 900;
+    line-height: 1.3em;
+}
+
+h1 { font-size: 60px; }
+h2 { font-size: 30px; }
+
+
+section {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    @include respond-to($medium) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    @include respond-to($desktop) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+}
+
+a {
+    color: $base-link-color;
+    text-decoration: none;
+    &:hover {
+        color: $base-link-color--hover;
+        text-decoration: underline;
+    }
+}
