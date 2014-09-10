@@ -16,8 +16,8 @@
                 
             <div class="col-md-12">
                 <blockquote>
-                    “If you' can't lie you'll never go anywhere.”
-                    <cite> -  Richard Nixon</cite>
+                    “If you can't lie you'll never go anywhere.”
+                    <cite>&shy;-&nbsp;Richard&nbsp;Nixon</cite>
                 </blockquote>
             </div>
 

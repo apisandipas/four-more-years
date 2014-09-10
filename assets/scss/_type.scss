@@ -9,7 +9,8 @@ body {
 }
 
 h1, h2, h3, h4, h5  {
-    font-weight: 900;
+    margin-top: 0;
+    font-weight: 800;
     line-height: 1.3em;
 }
 
@@ -17,18 +18,7 @@ h1 { font-size: 60px; }
 h2 { font-size: 30px; }
 
 
-section {
-    padding-top: 45px;
-    padding-bottom: 45px;
-    @include respond-to($medium) {
-        padding-top: 90px;
-        padding-bottom: 90px;
-    }
-    @include respond-to($desktop) {
-        padding-top: 160px;
-        padding-bottom: 160px;
-    }
-}
+
 
 a {
     color: $base-link-color;

@@ -1,0 +1,19 @@
+.rules {
+    @extend %foreground-red; 
+    @extend %panel ;
+    .section-title {
+        @extend .col-md-3;
+        @include respond-to($desktop) {
+            padding: 0 !important;
+        }
+    }
+    ol {
+        font-weight: 800;
+        li {
+            margin-bottom: 1.75em;
+            > span {
+                font-weight: normal;
+            }
+        } 
+    }
+}

@@ -4,6 +4,7 @@
 @import 'mixins/retina-sprite';
 @import 'mixins/ghost-vertical-align';
 @import 'mixins/respond-to';
+@import 'mixins/placeholder-styles';
 
 
 
@@ -18,7 +19,18 @@
 }
 
 
-
+%panel {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    @include respond-to($medium) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    @include respond-to($desktop) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+}
 
 
 

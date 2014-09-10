@@ -28,6 +28,7 @@ function dnd_load_features(){
     $features = array(
         // 'favicons',
         'wp-head-cleanup',
+        'google_analytics',
         'customize-admin',
         'no-image-dimensions',
         'slug-in-body-class'
@@ -42,19 +43,19 @@ function dnd_load_features(){
 /**
  *  Load 'Custom Post Types'
  */
-add_action( 'after_setup_theme', 'dnd_load_cpt' );
-function dnd_load_cpt(){
-    $path = __DIR__ . '/custom-post-types/';
+// add_action( 'after_setup_theme', 'dnd_load_cpt' );
+// function dnd_load_cpt(){
+//     $path = __DIR__ . '/custom-post-types/';
 
-    $types = array(
-        // 'events',
-        // 'beers',
-        // 'products'
-    );
+//     $types = array(
+//         // 'events',
+//         // 'beers',
+//         // 'products'
+//     );
 
-    foreach ( $types as $type ) {
-        require $path.$type.'.php';
-    }
-}
+//     foreach ( $types as $type ) {
+//         require $path.$type.'.php';
+//     }
+// }
 
 

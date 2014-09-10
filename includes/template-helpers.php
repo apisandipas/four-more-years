@@ -52,15 +52,7 @@ function dnd_copyright_range($start_copyright_year = "2014") {
 }
 
 
-/**
- * Formats the date for the blog posts.
- * @return [type] [description]
- */
-function dnd_post_date(){
-    global $post;
-    echo get_the_date('m', $post->ID);?><br><?php
-    echo get_the_date('y', $post->ID);
-}
+
 
 
 /**

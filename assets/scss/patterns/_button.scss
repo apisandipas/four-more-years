@@ -9,6 +9,7 @@
   -webkit-font-smoothing: antialiased;
   border: none;
   cursor: pointer;
+  text-align: center;
 
   @include border-radius(3px);
   @include button-skin($background, $color);

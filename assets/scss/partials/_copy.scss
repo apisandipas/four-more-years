@@ -1,0 +1,14 @@
+.copy {
+    @extend %foreground-red;
+    @extend %panel ;
+    blockquote {
+        font-size: 60px;
+        line-height: 1em;
+        font-weight: 800;
+        > cite {
+            font-size: 20px;
+            font-weight: normal;
+            font-style: normal;
+        }
+    }
+}

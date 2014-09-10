@@ -1,7 +1,7 @@
 <section class="rules">
     <div class="container">
         <div class="row">
-            <div class="col-md-3" style="padding:0;">
+            <div class="section-title" class="">
                 <h1 style="margin-top:0;">Sorry, not this time if ...</h1>
             </div>
             <div class="col-md-9">

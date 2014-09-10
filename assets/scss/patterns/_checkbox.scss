@@ -1,0 +1,32 @@
+@mixin checkbox {
+  display: none;
+  + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      display: inline-block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      border: 1px solid #e0e0e0;
+      background-color: #fafafa;
+
+    }
+  }
+  &:checked + label:before {
+    font-family: Arial;
+    content: "\2713";
+    color: #aaaaaa;
+    font-size: 15px;
+    text-align: center;
+    line-height: 13px;
+  }
+}

@@ -7,66 +7,28 @@
 
 /* Patterns */
 @import 'patterns/button';
+@import 'patterns/radio';
+@import 'patterns/checkbox';
 
 /* Partials */
 @import 'partials/splash';
+@import 'partials/copy';
+@import 'partials/schedule';
+@import 'partials/rules';
+@import 'partials/signup';
+@import 'partials/contact';
+@import 'partials/site-footer';
 
 
-.copy {
-    @extend %foreground-red;
-    blockquote {
-        font-size: 60px;
-        line-height: 1em;
-        font-weight: 900;
-        > cite {
-            font-size: 20px;
-            font-weight: normal;
-            font-style: normal;
-        }
-    }
+.parsley-errors-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
 }
 
-.schedule {
-     @extend %foreground-white;
+.parsley-errors-list.filled:parent, .hasError {
+    background: #fff;
+    border-color: red;
+    color: red;
 }
-
-.rules {
-    @extend %foreground-red; 
-    ol {
-        font-weight: 900;
-        li {
-            margin-bottom: 1.75em;
-            > span {
-                font-weight: normal;
-            }
-        } 
-    }
-}
-
-.sign-up {
-    @extend %foreground-white;
-}
-
-.contact {
-    @extend %foreground-white;
-    background-image: url('../img/secret-phone.jpg');
-    background-position: center;
-    background-color: red;
-    background-size: cover;
-
-    .label {
-        font-weight: 900;
-        display: inline-block;
-        margin-right: 0.5em;
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-        li {
-            display: inline-block;
-            margin-right: 2em;
-        }
-    }
-}
-

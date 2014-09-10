@@ -1,15 +1,19 @@
 
 .splash {
+    @extend %foreground-white;
+    @extend %panel;
     padding-top: 45px;
     padding-bottom: 45px;
     background-image: url('../img/tricky-dick.jpg');
-    background-position: center;
+    background-position: top center;
     background-color: red;
     background-size: cover;
-    @extend %foreground-white;
+    background-repeat: no-repeat;
+    
+
     h1 {
         font-size: 40px;
-        font-weight: 900;
+        font-weight: 800;
         line-height: 1em;
         margin-bottom: 0.5em;
     }
