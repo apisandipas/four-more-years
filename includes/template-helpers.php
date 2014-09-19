@@ -60,10 +60,8 @@ function dnd_copyright_range($start_copyright_year = "2014") {
  * @return {String} Facebook Share URL
  */
 function dnd_facebook_share(){
-    global $post;
 
-    $permalink = urlencode( get_permalink( $post->ID ) );
-    $fb_url = "http://www.facebook.com/sharer/sharer.php?u=" . $permalink;
+    $fb_url = "http://www.facebook.com/sharer/sharer.php?u=http://drinkndev.com";
 
     return $fb_url;
 }
@@ -74,10 +72,8 @@ function dnd_facebook_share(){
  * @return {String} Twitter Share URL
  */
 function dnd_twitter_share(){
-    global $post;
 
-    $post_title = urlencode( get_the_title( $post ) );
-    $twt_path = "http://twitter.com/share/?text=" . $post_title . ' ' ;
+    $twt_path = "http://twitter.com/share/?text= I just registered for the 2nd Annual Doejo Drink N Dev Hackathon, and so should you! http://drinkndev.com";
 
     return $twt_path;
 }

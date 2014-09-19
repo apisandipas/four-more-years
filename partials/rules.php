@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="section-title" class="">
-                <h1 style="margin-top:0;">Sorry, not this time if ...</h1>
+                <h1>Sorry, not this time if ...</h1>
             </div>
             <div class="col-md-9">
                 <ol>

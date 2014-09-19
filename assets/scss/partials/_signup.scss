@@ -3,7 +3,9 @@
     @extend %panel;
 
 
-
+    .form-response {
+        display: none;
+    }
 
     .fat {
         font-weight: 800;
@@ -24,6 +26,12 @@
             width: 20px;
             height: 20px;
             font-size: 30px;
+            font-size: 20px;
+            line-height: 0.9em;
+            background-color: red;
+            // &:checked {
+            //     background-color: red;
+            // }
         }
         @include respond-to($desktop) {
             margin-bottom: 1em;

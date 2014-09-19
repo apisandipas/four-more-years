@@ -11,24 +11,38 @@
 %foreground-red {
     color: red;
     background: white;
+    p a { 
+        color: red; 
+        &:hover {
+            color: red;
+            text-decoration: underline;
+        }
+    }
 }
 
 %foreground-white{
     color: white;
     background: red;
+    p a { 
+        color: white; 
+        &:hover {
+            color: white; 
+            text-decoration: underline;
+        }
+    }
 }
 
 
 %panel {
     padding-top: 45px;
-    padding-bottom: 45px;
+    padding-bottom: 80px;
     @include respond-to($medium) {
         padding-top: 90px;
-        padding-bottom: 90px;
+        padding-bottom: 130px;
     }
     @include respond-to($desktop) {
         padding-top: 160px;
-        padding-bottom: 160px;
+        padding-bottom: 200px;
     }
 }
 

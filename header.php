@@ -12,6 +12,12 @@
     <title><?php dnd_site_title(); ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Facebook OpenGraph metatags -->
+    <meta property="og:title" content="Doejo Drink 'n' Dev Hackathon"/>
+    <meta property="og:description" content=" A party for developers who love beer. Saturday, October 11th, 2014"/>
+    <meta property="og:url" content="http://www.drinkndev.com"/>
+    <meta property="og:image" content="http://www.drinkndev.com/wp-content/theme/drinkndev/img/og-image.png"/>
     
     <?php dnd_load_typekit('fmr1eon'); ?>
     

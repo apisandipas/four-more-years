@@ -21,8 +21,20 @@ window.log = function(){
                 var $target = $(this).data('target');
                 activateForm($target);
             });
+
+            $(".twitter-share, .facebook-share").click(function(e) {
+                var $this = $(this),
+                    source = $this.attr("href"),
+                    msg = $this.data('window-title') || "Share This Post",
+                    win = window.open(source, msg, "height=400,width=530");
+
+                if (window.focus) win.focus();
+                if (win) e.preventDefault();
+            });
             
     });
+
+
 
 
     // Allow hashchange event to trigger form switch
@@ -58,23 +70,29 @@ window.log = function(){
     // Floating label implementation
     function initFloatingLabels() {
         
-            var onClass = "on";
-            var showClass = "show";
-          
-            $("input").bind("checkval",function(){
-                var label = $(this).prev(".floating");
-                if(this.value !== ""){
-                  label.addClass(showClass);
-                } else {
-                  label.removeClass(showClass);
-                }
-            }).on("keyup",function(){
-                $(this).trigger("checkval");
-            }).on("focus",function(){
-                $(this).prev(".floating").addClass(onClass);
-            }).on("blur",function(){
-                  $(this).prev(".floating").removeClass(onClass);
-            }).trigger("checkval");
+        var onClass = "on";
+        var showClass = "show";
+      
+        $("input").bind("checkval", function(){
+            var label = $(this).prev(".floating");
+            if(this.value !== ""){
+              label.addClass(showClass);
+            } else {
+              label.removeClass(showClass);
+            }
+        }).on("keyup",function(){
+
+            $(this).trigger("checkval");
+
+        }).on("focus",function(){
+
+            $(this).prev(".floating").addClass(onClass);
+
+        }).on("blur",function(){
+
+              $(this).prev(".floating").removeClass(onClass);
+              
+        }).trigger("checkval");
     }
 
 

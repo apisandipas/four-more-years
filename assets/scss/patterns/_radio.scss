@@ -12,6 +12,7 @@
       left: 0;
       bottom: 3px;
       display: inline-block;
+      // padding-bottom: 3px;
       content: "";
       width: 25px;
       height: 25px;
@@ -22,8 +23,9 @@
     }
   }
   &:checked + label:before {
-    font-family: Arial;
-    content: "";
-    background: red;
+    // font-family: Arial;
+    content: "\2713";
+    color: red;
+    background-color: white;
   }
 }

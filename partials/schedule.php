@@ -8,31 +8,31 @@
                     <h1>Schedule of Events</h1>
                     <ul class="timeline-items">
                         <li class="timeline-item">
-                            <span class="fat">4PM</span>
+                            <span class="fat">12PM</span>
                             Social hour
                         </li>
                         <li class="timeline-item">
-                            <span class="fat">5PM</span>
+                            <span class="fat">1PM</span>
                             Start hacking
                         </li>
                         <li class="timeline-item">
-                            <span class="fat">10:30PM</span>
+                            <span class="fat">7PM</span>
                             Stop hacking
                         </li>
                         <li class="timeline-item">
-                            <span class="fat">11PM</span>
+                            <span class="fat">7:30PM</span>
                             Presentations
                         </li>
                         <li class="timeline-item">
-                            <span class="fat">11:30PM</span>
+                            <span class="fat">8:30PM</span>
                             Awards
                         </li>
                         <li class="timeline-item">
-                            <span class="fat">12AM</span>
+                            <span class="fat">9PM</span>
                             GTFO
                         </li>
                         <li class="timeline-item">
-                            <span class="fat">12:01AM</span>
+                            <span class="fat">9:01PM</span>
                             After-party?
                         </li>
                      

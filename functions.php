@@ -65,6 +65,15 @@ function navigation_menus() {
     register_nav_menus( $locations );
 }
 
+/**
+ * Changes default Mail content type
+ */
+add_filter( 'wp_mail_content_type', function($content_type){
+    return 'text/html';
+});
+
+
+
 
 /**
 *  Create a options page ia ACF Options page plugin

@@ -11,7 +11,7 @@
                     </h1>
 
                     <p>Like free booze and code? Join us for 2nd Annual
-                    Drink N Dev hackathon on October 11th</p>
+                    Drink&nbsp;N&nbsp;Dev hackathon on October 11th @ 12 noon</p>
 
                     <a href="#register-team" data-target="team" class="button splash-btn-team">Register Team</a>
                     <a href="#register-individual" data-target="individual" class="button splash-btn-individual">Register Individual</a>
