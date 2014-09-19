@@ -16,7 +16,7 @@ module.exports = function(grunt) {
             },
             compass: {
                 // Watch all SCSS and Icons files, ignore bootstrap
-                files: ["assets/**/*.scss", "!assets/scss/bootstrap/**.scss"],
+                files: ["assets/**/*.scss"],
                 tasks: ["compass:build"]
             },
             compassSprites: {
